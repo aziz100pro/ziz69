@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ziz69 | Streamer Links & Support</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #0b0f19;
+            color: #f3f4f6;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(124, 58, 237, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(239, 68, 68, 0.12) 0%, transparent 40%);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 440px;
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            padding: 32px 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .avatar-container {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 16px;
+        }
+
+        .avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #7c3aed, #ef4444);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            font-weight: 800;
+            color: white;
+            box-shadow: 0 0 25px rgba(124, 58, 237, 0.4);
+            border: 3px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .status-badge {
+            position: absolute;
+            bottom: 2px;
+            right: 2px;
+            width: 20px;
+            height: 20px;
+            background-color: #10b981;
+            border: 3px solid #111827;
+            border-radius: 50%;
+        }
+
+        .nickname {
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 4px;
+            color: #ffffff;
+        }
+
+        .role {
+            font-size: 14px;
+            color: #9ca3af;
+            margin-bottom: 24px;
+            font-weight: 500;
+        }
+
+        /* Bank Card Style */
+        .bank-card {
+            background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 24px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .bank-card:hover {
+            border-color: rgba(239, 68, 68, 0.6);
+            transform: translateY(-2px);
+        }
+
+        .bank-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .bank-name {
+            font-weight: 700;
+            font-size: 16px;
+            color: #ef4444;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .bank-logo-text {
+            background: #ef4444;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+        }
+
+        .card-number {
+            font-family: monospace;
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #ffffff;
+            margin-bottom: 16px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px dashed rgba(255, 255, 255, 0.1);
+        }
+
+        .copy-btn {
+            width: 100%;
+            background: #ef4444;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: background 0.2s ease, transform 0.1s ease;
+        }
+
+        .copy-btn:hover {
+            background: #dc2626;
+        }
+
+        .copy-btn:active {
+            transform: scale(0.98);
+        }
+
+        /* Links / Buttons */
+        .links-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            padding: 14px 20px;
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .btn-telegram {
+            background: #24a1de;
+            color: white;
+        }
+
+        .btn-telegram:hover {
+            background: #2090c7;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(36, 161, 222, 0.3);
+        }
+
+        .btn-donationalerts {
+            background: linear-gradient(135deg, #ff6b00, #ff8c00);
+            color: white;
+        }
+
+        .btn-donationalerts:hover {
+            background: linear-gradient(135deg, #e56000, #e07d00);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 0, 0.3);
+        }
+
+        /* Toast notification */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #10b981;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-weight: 600;
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4);
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Avatar / Logo -->
+        <div class="avatar-container">
+            <div class="avatar">Z</div>
+            <div class="status-badge"></div>
+        </div>
+
+        <h1 class="nickname">ziz69</h1>
+        <p class="role">Твои любимые стримы и трансляции</p>
+
+        <!-- Kaspi Bank Card Widget -->
+        <div class="bank-card">
+            <div class="bank-header">
+                <span class="bank-name">Kaspi Bank</span>
+                <span class="bank-logo-text">GOLD</span>
+            </div>
+            <div class="card-number" id="cardNumberText">4400 4300 2544 9338</div>
+            <button class="copy-btn" onclick="copyCardNumber()">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                Скопировать номер карты
+            </button>
+        </div>
+
+        <!-- Social & Support Links -->
+        <div class="links-stack">
+            <!-- Telegram Link -->
+            <a href="https://t.me/zzzizz69" target="_blank" class="btn btn-telegram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.228-.461-1.901-.903-1.056-.693-1.653-1.124-2.678-1.8-1.185-.781-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-752-.245-1.349-.374-1.297-.789.027-.216.324-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635.099-.002.321.023.465.14.12.098.153.228.166.331.014.111.028.364.013.56z"/></svg>
+                Telegram канал
+            </a>
+
+            <!-- DonationAlerts Link -->
+            <a href="https://www.donationalerts.com/r/ziz69" target="_blank" class="btn btn-donationalerts">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                Поддержать донатом (DA)
+            </a>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        Номер карты скопирован!
+    </div>
+
+    <script>
+        function copyCardNumber() {
+            const cardNumber = "4400430025449338";
+            navigator.clipboard.writeText(cardNumber).then(() => {
+                showToast();
+            }).catch(err => {
+                console.error('Ошибка копирования: ', err);
+            });
+        }
+
+        function showToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2500);
+        }
+    </script>
+</body>
+</html>
